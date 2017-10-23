@@ -1,0 +1,31 @@
+{
+  "name": "goal-project",
+  "version": "0.0.1",
+  "description": "A project for 2017 goals.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run lint && npm run inject",
+    "start": "node app.js",
+    "lint": "jshint *.js src/",
+    "inject": "bower update -s && wiredep -s src/views/*.html -i ../../public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-miranda/goal-project.git"
+  },
+  "author": "Carlos A. Miranda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlos-miranda/goal-project/issues"
+  },
+  "homepage": "https://github.com/carlos-miranda/goal-project#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "wiredep": "^4.0.0",
+    "wiredep-cli": "^0.1.0"
+  }
+}

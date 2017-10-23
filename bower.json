@@ -1,0 +1,21 @@
+{
+  "name": "goal-project",
+  "description": "A project for 2017 goals.",
+  "main": "app.js",
+  "authors": [
+    "Carlos A. Miranda"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/carlos-miranda/goal-project",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+          "dist/css/bootstrap.min.css",
+          "dist/js/bootstrap.min.js"
+      ]
+    }
+  }
+}
