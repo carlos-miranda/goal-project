@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "npm run lint && npm run inject",
+    "prestart": "npm run inject",
     "start": "node app.js",
     "lint": "jshint *.js src/",
-    "inject": "bower update -s && wiredep -s src/views/*.html -i ../../public/"
+    "inject": "bower update -s && wiredep -s src/views/*.ejs -i ../../public/"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/carlos-miranda/goal-project#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2"
   },
   "devDependencies": {

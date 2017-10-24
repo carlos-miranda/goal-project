@@ -3,12 +3,16 @@ var express = require("express");
 var app = express();
 
 app.use(express.static("public"));
-app.use(express.static("src/views"));
 
-app.get("/", function (request, response) {
-    response.send("Hello, World!");
+app.set("views", "./src/views/");
+app.set("view engine", "ejs");
+
+app.get("/", function (request, response){
+   response.render("index"); 
 });
 
 app.listen(process.env.PORT, function (error) {
-    console.log("Hello, World!");
+    if (!error) {
+        console.log("I've started!");
+    }
 });
